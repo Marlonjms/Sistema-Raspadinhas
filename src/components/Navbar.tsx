@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { UserPlus, LogIn, LucideUserRoundPlus } from "lucide-react";
 import { UserPlusIcon } from "@heroicons/react/24/solid";
 import logoImg from "../assets/logo.webp";
-
+import { Link } from "react-router-dom"
 interface NavbarProps {
   onLoginClick: () => void;
   onRegisterClick?: () => void;
@@ -14,29 +14,30 @@ export function Navbar({ onLoginClick, onRegisterClick }: NavbarProps) {
 
   {/* Esquerda */}
   <div className="flex items-center gap-4  pl-1 ">
-    <img src={logoImg} alt="Logo" className="h-[125px] w-[125px]  object-contain"  />
   </div>
-
+  <img src={logoImg} alt="Logo" className="h-[125px] w-[125px]  object-contain"  />
+  
   {/* Meio */}
-<div className="hidden md:flex items-center gap-4 font-medium  text-[14px] text-white tracking-wide">
-  <a
-    href="#inicio"
-    className="px-3 py-1 rounded-md transition-colors hover:bg-white/10 "
+<div className="hidden md:flex items-center gap-4 font-medium text-[14px] text-white tracking-wide">
+  <Link
+    to="/"
+    className="px-3 py-1 rounded-md transition-colors hover:bg-white/10"
   >
     Início
-  </a>
-  <a
-    href="#raspadinhas"
+  </Link>
+  <Link
+    to="/raspadinhas"
     className="px-3 py-1 rounded-md transition-colors hover:bg-white/10"
   >
     Raspadinhas
-  </a>
-  <a
-    href="#indique"
-    className="px-3 py-1 rounded-md transition-colors hover:bg-white/10"
-  >
-    Indique e Ganhe
-  </a>
+  </Link>
+<Link
+  to="/indique-e-ganhe"
+  className="px-3 py-1 rounded-md transition-colors hover:bg-white/10"
+>
+  Indique e Ganhe
+</Link>
+
 </div>
 
 

@@ -61,12 +61,18 @@ const GameCard: FC<GameCardProps> = ({ titulo, descricao, preco }) => {
   );
 };
 
-export const Highlights = () => {
+interface HighlightsProps {
+  hideTitle?: boolean; // 👈 nova prop
+}
+
+export const Highlights: FC<HighlightsProps> = ({ hideTitle }) => {
   return (
-    <section className="max-w-full  mt-12 ">
-      <h2 className="flex items-center text-2xl font-bold text-yellow-400 mb-6">
-        🔥 Destaques
-      </h2>
+    <section className="max-w-full mt-12">
+      {!hideTitle && ( // 👈 só mostra se NÃO for true
+        <h2 className="flex items-center text-2xl font-bold text-yellow-400 mb-6">
+          🔥 Destaques
+        </h2>
+      )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <GameCard

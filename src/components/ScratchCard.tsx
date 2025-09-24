@@ -222,7 +222,7 @@ export function ScratchCard({ onResult }: ScratchCardProps) {
   };
 
   return (
-    <Card className="p-6 bg-[hsl(217,41%,9%)] border border-gray-800 rounded-xl shadow-md mt-6">
+    <Card className="p-6 bg-transparent border border-gray-800 rounded-xl shadow-md mt-6">
       <div className="text-center mb-6">
         <h2 className="text-3xl font-bold text-yellow-400 mb-2">Raspadinha Premium</h2>
         <p className="text-sm text-gray-400">Encontre 3 símbolos iguais nos 9 quadrados e ganhe prêmios incríveis!</p>

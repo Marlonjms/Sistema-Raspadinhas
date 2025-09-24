@@ -3,7 +3,7 @@ import logoImg from "../assets/logo.webp";
 
 export const Footer: FC = () => {
   return (
-    <footer className=" px-14 footer bg-transparent w-full text-sm mt-8">
+    <footer className=" px-14 footer bg-transparent w-full text-sm mt-8 mb-4">
       <div className="flex flex-col md:flex-row gap-5 mx-auto max-w-[var(--max-layout-width)] px-4 w-full h-full">
         
         {/* Logo + Direitos */}

@@ -8,7 +8,7 @@ import { ScratchResult } from "../types/prizes";
 import { toast } from "sonner";
 import { Highlights } from "../components/Highlights";
 import { Footer } from "../components/Footer";
-
+import { PrizesSection } from "../components/PrizesSection";
 
 
 import { CardBannerCarousel } from "../components/CardBannerCarousel";
@@ -38,7 +38,6 @@ const Index = () => {
           <CardBannerCarousel  /> 
           {/* Destaques */}
           <Highlights />
-          <ScratchCard onResult={handleScratchResult} />
         </section>
       </main>
        
